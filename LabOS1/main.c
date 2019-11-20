@@ -17,7 +17,6 @@ void FuncForOnExit()
 int zero = 0;
 int main(int argc, char **argv)
 {
-    //for (int i = 0; i < argc; i++) printf("%s - huy\n", argv[i]);
     atexit(FuncForAtExit);
     on_exit(FuncForOnExit, NULL);
     pid_t  fpid;
@@ -26,7 +25,6 @@ int main(int argc, char **argv)
     int rv;
     int j = 3;
     fpid = fork();
-  //  spid = fork();
 
     printf("fpid from fork: %d\n", fpid);
     switch (fpid)
@@ -72,8 +70,6 @@ int main(int argc, char **argv)
             printf("PARENT(%d): Статус выхода потомка -- %d\n", getpid(), status);
             printf("PARENT(%d): Выход!\n", getpid());
     }
-
-
 
     return 0;
 }
