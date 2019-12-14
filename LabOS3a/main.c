@@ -38,7 +38,8 @@ int main()
     {
         clock_gettime(CLOCK_REALTIME, &mt1);
 
-        char num[10];
+        char num[10];printf("Can't attach shared memory\n");
+        exit(-1);
         char millisec[4];
         char nanosec[8];
         char str[50];
